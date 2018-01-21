@@ -273,10 +273,9 @@ function eventDispature(canvas){
 function detectEvent(x,y,type){
   //判断是否击中
   airspace.forEach(function(p){
-      //范围 x,x+size
-      //y,y+size
-      var maX=p.x+size;
-      var maY=p.y+size;
+      //范围 x,x+size y,y+size
+      var maX=p.x+p.width;
+      var maY=p.y+p.height;
       if(x>=p.x&&x<=maX&&y>=p.y&&y<=maY){
           p.selected=true;
           taget=p;

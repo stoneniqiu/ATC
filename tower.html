@@ -5,7 +5,7 @@
  </head>
  <body>
      <style>
-         canvas{border: black solid 2px;cursor: pointer}
+         canvas{border: black solid 2px;cursor: pointer;display: block}
          .plane{ float: right;}
          .btn{display: inline-block;padding: 5px 10px;cursor: pointer;border: 1px solid gray;
          border-radius: 5px;  box-shadow: 0 0 7px gray
@@ -16,8 +16,10 @@
          .btn.r{margin-right: 20px;}
          #info{color: red;}
          #score{color: skyblue;font-size: large;font-weight: bold;}
+         .main{width: 900px;margin: 0 auto;}
+         
      </style>
-    <div>
+    <div class="main">
         <canvas id="surface" width="800" height="500">
 
         </canvas>
