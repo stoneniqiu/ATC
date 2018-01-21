@@ -283,7 +283,6 @@ function detectEvent(x,y,type){
           airspace.filter(n=>n.flightId!=p.flightId).forEach(n=>n.selected=false);
       }
   })
-
 }
 
 window.onload=start;
