@@ -6,13 +6,35 @@
  <body>
      <style>
          canvas{border: black solid 2px;cursor: pointer}
+         .plane{ float: right;}
+         .btn{display: inline-block;padding: 5px 10px;cursor: pointer;border: 1px solid gray;
+         border-radius: 5px;  box-shadow: 0 0 7px gray
+        }
+        .btn:hover{box-shadow: 0 0 5px gray}
+        .btn:active{box-shadow: 0 0 5px red}
+         .btn.h{color: red;}
+         .btn.r{margin-right: 20px;}
+         #info{color: red;}
+         #score{color: skyblue;font-size: large;font-weight: bold;}
      </style>
     <div>
         <canvas id="surface" width="800" height="500">
 
         </canvas>
+       
+        <div class="plane">
+            <a class="btn" onclick="control(38)">U</a>
+            <a class="btn" onclick="control(40)">D</a>
+            <a class="btn" onclick="control(37)">L</a>
+            <a class="btn r" onclick="control(39)">R</a>
+            <a class="btn h" onclick="control(0)" >H</a>
+            <a class="btn m"onclick="control(1)" >M</a>
+            <a class="btn s"onclick="control(2)" >S</a>
+        </div>
+        <div>目前得分:<span id="score">0</span>分</div>
         <div>共有<span id="total">2</span>架飞机</div>
-        <div>共有<span id="leave">0</span>架飞机离场</div>
+        <div>共有<span id="leave">0</span>架飞机离场/坠毁</div>
+        <div><span id="info"></span></div>
     </div>
     <script src="js/main.js" ></script>
  </body>
