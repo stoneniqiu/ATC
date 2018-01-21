@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我们结婚啦</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+ <script src="js/jcanvas.js" ></script>
+    <style>
+#main{border: 1px solid red;}
+    </style>
+</head>
+<body >
+ <div>  
+ <canvas id="main"  width="400px" height="400px">
+
+ </canvas>
+
+ </div>
+</body>
+ <script>
+     function start_1(idCanvas) {
+               jc('#myCircle_1')
+                   .animate({ x: 200 }, 2000, { fn: 'myFunction' })//供这里调用
+                   .animate({ y: 300 }, 2000);//x Y 为移动的位置
+           }
+           function stop_1(idCanvas) {
+               jc('#myCircle_1')
+                   .animate({ y: 20, x: 20 });
+           }
+           function onload_1(idCanvas) {
+               var myFunction = function(progress, params) {
+                   var a = params.a || 1;
+                   var n = params.n || 2;
+                   return Math.pow(progress, 4) - Math.pow(progress, 2) * a + progress * a;//pow(X,y)就是计算X的Y次方
+               }
+               jc.start(idCanvas, true);
+               jc.addAnimateFunction('myFunction', myFunction);//定义的函数及函数名
+               jc.circle(20, 20, 40, '#00FFFF', 1)
+                   .id('myCircle_1'); //画了个圆，这样就id了！！！！！！
+           }
+
+           onload_1("main");
+           start_1("main");
+</script>
+</html>
