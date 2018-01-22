@@ -14,10 +14,10 @@
         .btn:active{box-shadow: 0 0 5px red}
          .btn.h{color: red;}
          .btn.r{margin-right: 20px;}
-         #info{color: red;}
+         #info{color: red;display: block;height: 30px;}
          #score{color: skyblue;font-size: large;font-weight: bold;}
-         .main{width: 900px;margin: 0 auto;}
-         
+         .main{width:800px;margin: 0 auto;}
+         .note{font-size: small;color: #333}
      </style>
     <div class="main">
         <canvas id="surface" width="800" height="500">
@@ -37,6 +37,8 @@
         <div>共有<span id="total">2</span>架飞机</div>
         <div>共有<span id="leave">0</span>架飞机离场/坠毁</div>
         <div><span id="info"></span></div>
+        <div class="note"> 七个键表示4个方向和3种速度，飞机最后一个字母表示目的地，R表示跑道，跑道只能从两侧以最慢速度进入，去ABCD不能以最高速度H离开。 正确操作得5分 
+         <a href="http://www.cnblogs.com/stoneniqiu/p/8325317.html">详细介绍请点击这里</a></div>
     </div>
     <script src="js/main.js" ></script>
  </body>
